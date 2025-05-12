@@ -1,0 +1,40 @@
+<!-- impact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact - Operation Sindoor</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="overlay">
+    <h1>Impact on Pakistan</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Damage Report</h2>
+      <canvas id="damageChart" width="400" height="200"></canvas>
+      <script>
+        var ctx = document.getElementById('damageChart').getContext('2d');
+        var damageChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Military Bases', 'Aircraft', 'Infrastructure'],
+            datasets: [{
+              label: 'Damages Incurred',
+              data: [5, 3, 7],
+              backgroundColor: ['red', 'blue', 'green']
+            }]
+          }
+        });
+      </script>
+    </section>
+    <section>
+      <h2>Analysis</h2>
+      <p>Pakistan suffered significant military and economic losses. Multiple military bases were destroyed, air capabilities diminished, and there was a notable downturn in stock market indices due to geopolitical tensions.</p>
+    </section>
+  </main>
+</body>
+</html>

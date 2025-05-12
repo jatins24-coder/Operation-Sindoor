@@ -1,0 +1,28 @@
+<!-- where.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where - Operation Sindoor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+  <header class="overlay">
+    <h1>Where Was Operation Sindoor Conducted?</h1>
+  </header>
+  <main>
+    <div id="map" style="height: 500px;"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+      var map = L.map('map').setView([33.5, 73.0], 6);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+      L.marker([33.6167, 73.0333]).addTo(map).bindPopup('Nur Khan Airbase').openPopup();
+      L.marker([34.3, 73.2]).addTo(map).bindPopup('Neelum Valley').openPopup();
+    </script>
+  </main>
+</body>
+</html>
